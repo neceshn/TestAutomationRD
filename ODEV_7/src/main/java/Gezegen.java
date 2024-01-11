@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 public class Gezegen {
 
     public enum EnumGezegenler {
@@ -133,6 +130,7 @@ public class Gezegen {
             }
         };
         private int siraNumarasi;
+
         public double getUzaklik() {
             return 0;
         }
@@ -144,13 +142,24 @@ public class Gezegen {
         public double getDonmeSuresi() {
             return 0;
         }
+
+        public String getGezegenAdi() {
+            return name();
+        }
+
         EnumGezegenler(int i) {
             this.siraNumarasi = i;
         }
+
     }
 
     private EnumGezegenler enumGezegenler;
-    Gezegen(EnumGezegenler gezegenAdi){
+
+    public String getEnumAdi() {
+        return this.enumGezegenler.getGezegenAdi();
+    }
+
+    Gezegen(EnumGezegenler gezegenAdi) {
         this.enumGezegenler = gezegenAdi;
     }
 
