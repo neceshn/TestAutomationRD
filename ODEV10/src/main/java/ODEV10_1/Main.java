@@ -14,13 +14,14 @@ public class Main {
         intBook.printGenericBook();
 
         List<String> stringList = List.of("Java", "Python", "C++", "JavaScript");
-        String targetString = "C++";
-        String foundString = findElementInCollection(stringList, targetString);
+        String targetString = "C#";
+        int foundIndex = BookSearch.findElementInCollection(stringList, targetString);
 
-        if (foundString != null) {
-            System.out.println("Kitap bulundu: " + foundString);
+        if (foundIndex != -1) {
+            System.out.println("Kitap bulundu, index: " + foundIndex);
         } else {
-            System.out.println("Kitap bulunamadı.");
+            System.out.println("Kitap bulunamadı." +foundIndex);
         }
+
     }
 }
